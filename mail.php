@@ -6,28 +6,25 @@ require 'vendor/autoload.php';
 if(isset($_POST)){
     $data = json_decode($_POST['data'],true); 
     $message=file_get_contents('email_template.php');
-    $electronics = $appliances = $things = "<table border='1'><th>Item</th><th>Quantity</th>";
+    $electronics = $appliances = $things = "";
     foreach($data['electronics'] as $key=>$value){
         $electronics .= "<tr>";
-        $electronics .= "<td>".$key."</td>";
-        $electronics .= "<td>".$value."</td>";
+        $electronics .= "<td class='tg-0pky'>".$key."</td>";
+        $electronics .= "<td class='tg-0pky'>".$value."</td>";
         $electronics .= "</tr>";
     }
-    $electronics .= "</table>";
     foreach($data['appliances'] as $key=>$value){
         $appliances .= "<tr>";
-        $appliances .= "<td>".$key."</td>";
-        $appliances .= "<td>".$value."</td>";
+        $appliances .= "<td class='tg-0pky'>".$key."</td>";
+        $appliances .= "<td class='tg-0pky'>".$value."</td>";
         $appliances .= "</tr>";
     }
-    $appliances .= "</table>";
     foreach($data['things'] as $key=>$value){
         $things .= "<tr>";
-        $things .= "<td>".$key."</td>";
-        $things .= "<td>".$value."</td>";
+        $things .= "<td class='tg-0pky'>".$key."</td>";
+        $things .= "<td class='tg-0pky'>".$value."</td>";
         $things .= "</tr>";
     }
-    $things .= "</table>";
 
     $replaceFrom = array('[=NAME]','[=EMAIL]','[=PHONE]','[=MODE]','[=SHIFT]','[=FROM]','[=TO]','[=ELECTRONICS]','[=APPLIANCES]','[=OTHERS]');
     $replaceTo = array($data['info']['name'],$data['info']['email'],$data['info']['phone'],$data['transport']['mode'],$data['transport']['shift'],$data['transport']['from'],$data['transport']['to'],$electronics,$appliances,$things);
@@ -50,7 +47,7 @@ if(isset($_POST)){
         $mail->setFrom('from@example.com', 'Mailer');
         $mail->addAddress('samnsimson@gmail.com', 'Sam N Simson');     // Add a recipient
         $mail->addReplyTo('info@example.com', 'Information');
-        $mail->addCC('cc@example.com');
+        $mail->addCC('samcladson08@gmail.com');
         $mail->addBCC('bcc@example.com');
     
         //Content
