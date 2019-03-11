@@ -1,0 +1,294 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta charset="UTF-8">
+</html>
+<div class="container">
+    <div class="progress" style="margin:2em auto">
+        <div class="progress-bar bg-info" role="progressbar" style="width:25%" aria-valuenow="25"></div>
+    </div>
+    <div class="slide">
+        <div class="form-section-1">
+            <h1>Personla detail</h1>
+                <div class="col-sm-6 col-md-6 col-lg-6 offset-sm-3">
+                        <input type="text" name="name" class="form-control name" placeholder="Name" required><br>
+                        <input type="text" name="email" class="form-control email" placeholder="E-mail" required><br>
+                        <input type="text" name="phone" class="form-control phone" placeholder="Phone" required>
+                    </div>
+                    <button class="btn btn-success next" onclick="collectData1()">Next</button>
+                </div>
+        <div class="form-section-2">
+            <h1>Mode of transport</h1>
+                <div class="col-sm-6 col-md-6 col-lg-6 offset-sm-3">
+                        <select name="mode" id="mode" class="form-control">
+                            <option value="truck">Truck</option>
+                            <option value="van">Van</option>
+                            <option value="car">Car</option>
+                            <option value="bike">Bike</option>
+                        </select><br>
+                        <label for="shift">I am shifting my</label>
+                        <select name="shift" id="shift" class="form-control">
+                                <option value="office">Office</option>
+                                <option value="home">Home</option>
+                                <option value="vehicle">Vehicle</option>
+                        </select><br>
+                        <select name="from" id="from" class="form-control">
+                                <option value="tirupur">Tirupur</option>
+                                <option value="palladam">Palladam</option>
+                                <option value="coimbatore">Coimbatore</option>
+                                <option value="chennai">Chennai</option>
+                        </select><br>
+                        <select name="to" id="to" class="form-control">
+                                <option value="tirupur">Tirupur</option>
+                                <option value="palladam">Palladam</option>
+                                <option value="coimbatore">Coimbatore</option>
+                                <option value="chennai">Chennai</option>
+                        </select><br>
+                </div>
+                    <button class="btn btn-primary prev" onclick="prev(['info'])" onclick="">Prev</button>
+                    <button class="btn btn-success next" onclick="collectData2()">Next</button>
+        </div>
+        <div class="form-section-3">
+            <div class="row no-gutters">
+                <div class="col-sm-4 electronics">
+                    <h1>Electronics</h1>
+                    <br>
+                    <table class="table dark table-bordered">
+                        <thead>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                        <td><label for="tv"><i class="fas fa-tv"></i></label>
+                                            &nbsp;&nbsp;
+                                            <input type="checkbox" name="tv" class="television" value="tv">
+                                        </td>
+                                        <td><input type="number" name="quantity" class="tv form-control"/></td>
+                                </tr>
+                                <tr>
+                                        <td><label for="laptop"><i class="fas fa-laptop"></i></label>
+                                            &nbsp;&nbsp;
+                                            <input type="checkbox" name="laptop" class="lp" value="laptop">
+                                        </td>
+                                        <td><input type="number" name="quantity" class="laptop form-control"/></td>
+                                </tr>
+                                <tr>
+                                        <td><label for="light"><i class="fas fa-lightbulb"></i></label>
+                                            &nbsp;&nbsp;
+                                            <input type="checkbox" name="light" class="lg" value="light">
+                                        </td>
+                                        <td><input type="number" name="quantity" class="light form-control"/></td>
+                                </tr>
+                                <tr>
+                                        <td><label for="fridge"><i class="fas fa-clock"></i></label>
+                                            &nbsp;&nbsp;
+                                            <input type="checkbox" name="fridge" class="fg" value="fridge">
+                                        </td>
+                                        <td><input type="number" name="quantity" class="fridge form-control"/></td>
+                                </tr>
+                        </tbody>
+                        
+
+                    </table>
+                </div>
+                <div class="col-sm-4 appliances">
+                        <h1>Appliances</h1>
+                        <br>
+                        <table class="table dark table-bordered">
+                            <thead>
+                                    <th>Item</th>
+                                    <th>Quantity</th>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                            <td><label for="tv"><i class="fas fa-tv"></i></label>
+                                                &nbsp;&nbsp;
+                                                <input type="checkbox" name="tv" class="" value="sofa">
+                                            </td>
+                                            <td><input type="number" name="quantity" class="sofa form-control"/></td>
+                                    </tr>
+                                    <tr>
+                                            <td><label for="laptop"><i class="fas fa-laptop"></i></label>
+                                                &nbsp;&nbsp;
+                                                <input type="checkbox" name="laptop" class="" value="drawer">
+                                            </td>
+                                            <td><input type="number" name="quantity" class="drawer form-control"/></td>
+                                    </tr>
+                                    <tr>
+                                            <td><label for="light"><i class="fas fa-lightbulb"></i></label>
+                                                &nbsp;&nbsp;
+                                                <input type="checkbox" name="light" class="" value="bed">
+                                            </td>
+                                            <td><input type="number" name="quantity" class="bed form-control"/></td>
+                                    </tr>
+                                    <tr>
+                                            <td><label for="fridge"><i class="fas fa-clock"></i></label>
+                                                &nbsp;&nbsp;
+                                                <input type="checkbox" name="fridge" class="" value="wardrobe">
+                                            </td>
+                                            <td><input type="number" name="quantity" class="wardrobe form-control"/></td>
+                                    </tr>
+                            </tbody>
+                            
+        
+                        </table>
+                    </div>
+                    <div class="col-sm-4 things">
+                            <h1>Things</h1>
+                            <br>
+                            <table class="table dark table-bordered">
+                                <thead>
+                                        <th>Item</th>
+                                        <th>Quantity</th>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                                <td><label for="tv"><i class="fas fa-tv"></i></label>
+                                                    &nbsp;&nbsp;
+                                                    <input type="checkbox" name="tv" class="" value="glass">
+                                                </td>
+                                                <td><input type="number" name="quantity" class="glass form-control"/></td>
+                                        </tr>
+                                        <tr>
+                                                <td><label for="laptop"><i class="fas fa-laptop"></i></label>
+                                                    &nbsp;&nbsp;
+                                                    <input type="checkbox" name="laptop" class="" value="vessels">
+                                                </td>
+                                                <td><input type="number" name="quantity" class="vessels form-control"/></td>
+                                        </tr>
+                                        <tr>
+                                                <td><label for="light"><i class="fas fa-lightbulb"></i></label>
+                                                    &nbsp;&nbsp;
+                                                    <input type="checkbox" name="light" class="" value="toys">
+                                                </td>
+                                                <td><input type="number" name="quantity" class="toys form-control"/></td>
+                                        </tr>
+                                        <tr>
+                                                <td><label for="fridge"><i class="fas fa-clock"></i></label>
+                                                    &nbsp;&nbsp;
+                                                    <input type="checkbox" name="fridge" class="" value="plants">
+                                                </td>
+                                                <td><input type="number" name="quantity" class="plants form-control"/></td>
+                                        </tr>
+                                </tbody>
+                                
+            
+                            </table>
+                        </div>
+                        <button class="btn btn-primary prev" onclick="prev(['electronics','appliances','things'])">Prev</button>
+                        <button class="btn btn-warning next" onclick="collectdata3()">Submit</button>
+                    </div>
+        </div>
+        <div class="form-section-4">
+            <h1 class="text-center text-success"><i class="fas fa-check-circle"></i></h1>
+            <h1 class="text-center">Thank you for your request. mail has been sent</h1>
+        </div>
+    </div>
+    <div id="preview"></div>
+</div>
+    
+<body>
+    <script src="./assets/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        // initialize an empty array to collect all data
+        let data = {};
+        let progressWidth = $('.progress-bar').attr('aria-valuenow');
+        console.log(`initial ${progressWidth}`);
+        // setup slider
+        $slideshow = $('.slide').slick({
+            infinite: false,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            arrows:false,
+        });
+
+        function prev(section){
+            $slideshow.slick('slickPrev');
+            var currentProgress = $('.progress-bar').attr('aria-valuenow');
+            progressWidth = parseInt(currentProgress) - 25;
+            $('.progress-bar').css({width:`${progressWidth}%`});
+            $('.progress-bar').attr({"aria-valuenow":progressWidth});
+        }
+        function next(){
+            $slideshow.slick('slickNext');
+            progressWidth = parseInt(progressWidth) + 25;
+            $('.progress-bar').css({width:`${progressWidth}%`});
+            $('.progress-bar').attr({"aria-valuenow":progressWidth});
+            console.log(progressWidth);
+        }
+        // function to collect data from slide 1
+        function collectData1(){
+            var name = $('.name').val();
+            var email = $('.email').val();
+            var phone = $('.phone').val();
+            // push data to empty array
+            data.info = {
+                name:name,
+                email:email,
+                phone:phone
+            }
+            next();
+        }
+        function collectData2(){
+            var mode = $('#mode').val();
+            var shift = $('#shift').val();
+            var from = $('#from').val();
+            var to = $('#to').val();
+            // push data to empty array
+            data.transport = {
+                mode:mode,
+                shift:shift,
+                from:from,
+                to:to
+            };
+            next();
+        }
+        function collectdata3(){
+            var ElectronicsArrayData = {};
+            var AppliancesArrayData = {};
+            var ThingsArrayData = {};
+            $('.electronics :checked').each(function(){
+                var val = $(this).val();
+                ElectronicsArrayData[val] = $(`.${val}`).val();
+            });
+            $('.appliances :checked').each(function(){
+                var val = $(this).val();
+                AppliancesArrayData[val] = $(`.${val}`).val();
+            });
+            $('.things :checked').each(function(){
+                var val = $(this).val();
+                ThingsArrayData[val] = $(`.${val}`).val();
+            });
+            data.electronics = ElectronicsArrayData;
+            data.appliances = AppliancesArrayData;
+            data.things = ThingsArrayData;
+            console.log(data);
+            final(data);
+        }
+        function final(data){
+            //$('#preview').html("<pre>"+JSON.stringify(data)+"</pre>");
+            $.ajax({
+                url : "mail.php",
+                type:"POST",
+                data : {'data':JSON.stringify(data)},
+                ContentType: 'application/json',
+                success : function(data){
+                    //console.log(data);
+                    next();
+                },
+                error:function(err){
+                    console.log(`Error : ${err}`);
+                }
+            });
+        }
+    </script>
+    <style>
+        .slick-prev:before, .slick-next:before {
+            color: #09529b !important;
+        }
+    </style>
+</body>
