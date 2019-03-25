@@ -1,0 +1,741 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./assets/fullpage/dist/fullpage.css" />
+        <link rel="stylesheet" href="./node_modules/@chenfengyuan/datepicker/dist/datepicker.min.css">
+        <meta charset="UTF-8">
+    </head>
+<body>
+    <div class="container-fluid">
+        <!-- <div class="row ">
+            <div class="col-sm-4 col-xs-12 p-5 d-flex align-items-center left">
+                
+            </div> -->
+            <div id="" class="fullpage col px-5">
+                <div class="section col-xs-12 col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2 d-flex align-items-center justify-content-center">
+                    <div class="row mx-0">
+                        <h4 class="pl-0 pr-0 pt-2 pb-2">Where are you moving?</h4>
+                        <ul class="nav nav-tabs col-12" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active px-5" id="home-tab" data-toggle="tab" href="#within" role="tab"
+                                    aria-controls="home" aria-selected="true">Within Cities</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-5" id="between-tab" data-toggle="tab" href="#between" role="tab"
+                                    aria-controls="between" aria-selected="false">Between Cities</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content col-12 px-0" id="myTabContent">
+                            <div class="tab-pane fade show active pt-3 pb-3" id="within" role="tabpanel" aria-labelledby="home-tab">
+                                <form action="javascript:void(0)" class="form11">
+                                    <div class="form-group">
+                                        <label for="city">Select City</label>
+                                        <select class="form-control p-2" id="City" name="city">
+                                            <option value="">Choose your city from the dropdown</option>
+                                            <option value="Bangalore">Bangalore</option>
+                                            <option value="Chennai">Chennai</option>
+                                            <option value="Coimbatore">Coimbatore</option>
+                                            <option value="Madurai">Madurai</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="movingFromWithin">Moving From</label>
+                                        <input type="text" name="from" class="form-control p-2" id="movingFromWithin" placeholder="Type a landmark">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="movingToWithin">Moving To</label>
+                                        <input type="text" name="to" class="form-control p-2" id="movingToWithin" placeholder="Type a landmark">
+                                    </div>
+                                    <input class="btn btn-warning float-right estimateBtn11" type="submit" name="FormOneSubmit"
+                                        value="Estimate moving cost">
+                                </form>
+                            </div>
+                            <div class="tab-pane fade pt-3 pb-3" id="between" role="tabpanel" aria-labelledby="between-tab">
+                                <form action="javascript:void(0)" class="form12">
+                                    <div class="form-group">
+                                        <label for="movingFromBetween">Moving From</label>
+                                        <input type="text" name="fromCityBtw" class="form-control p-2" id="movingFromBetween"
+                                            placeholder="Type a landmark">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="movingToBetween">Moving To</label>
+                                        <input type="text" name="toCityBtw" class="form-control p-2" id="movingToBetween" placeholder="Type a landmark">
+                                    </div>
+                                    <input class="btn btn-warning float-right estimateBtn12" type="submit" name="FormOneSubmit"
+                                        value="Estimate moving cost">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col">
+                            
+                        </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="section col-xs-12 col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2 d-flex align-items-center">
+                    <div class="wrap">
+                        <h1 class="text-info"><i class="fas fa-home"></i></h1>
+                        <h4 class="py-3">Select your property size</h4>
+                        
+                        <form action="javascript:void(0)" id="form2">
+                            <div class="property-type-div">
+                                <p>Select your property type</p>
+                                <div class="btn-group types" data-toggle="buttons">
+                                    <label class="btn btn-info active">
+                                        <input type="radio" name="type" value="Home" autocomplete="off" checked> Home
+                                    </label>
+                                    <label class="btn btn-info">
+                                        <input type="radio" name="type" value="Office" autocomplete="off"> Office
+                                    </label>
+                                    <label class="btn btn-info">
+                                        <input type="radio" name="type" value="Vehicle" autocomplete="off"> Vehicle
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="property-size-div">
+                                <div class="tab-content" id="pills-tabContent">
+                                    <p>Select your property size</p>
+                                    <ul class="nav nav-pills mb-3" id="pills-tab-for-room" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active px-5" id="pills-1rk-tab" data-toggle="pill" href="#pills-1rk" role="tab"
+                                                aria-controls="pills-1rk" aria-selected="true">1 RK</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link px-5" id="pills-1bhk-tab" data-toggle="pill" href="#pills-1bhk" role="tab"
+                                                aria-controls="pills-1bhk" aria-selected="false">1 BHK</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link px-5" id="pills-2bhk-tab" data-toggle="pill" href="#pills-2bhk" role="tab"
+                                                aria-controls="pills-2bhk" aria-selected="false">2 BHK</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link px-5" id="pills-3bhk-tab" data-toggle="pill" href="#pills-3bhk" role="tab"
+                                                aria-controls="pills-3bhk" aria-selected="false">3 BHK</a>
+                                        </li>
+                                    </ul>
+                        
+                                    <div class="tab-pane fade show active" id="pills-1rk" role="tabpanel" aria-labelledby="pills-1rk-tab">
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div class="form-check my-2">
+                                                    <input class="form-check-input" type="radio" name="roomType" value="1rk" id="checkRoomType">
+                                                    <label class="form-check-label px-2" for="checkRoomType">
+                                                        <b>1RK</b>
+                                                    </label>
+                                                </div>
+                                                <div class="details row no-gutters">
+                                                    <div class="col-sm-10">
+                                                        <p class="m-0">Appliances you can lift</p>
+                                                        <div class="liftableItems">
+                                                            <span class="badge badge-light p-2 my-2">1 TV & 1 Stand</span>
+                                                            <span class="badge badge-light p-2 my-2">2 Chairs</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Washing Machine</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Fridge</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Single Cot</span>
+                                                            <span class="badge badge-light p-2 my-2">10 Carton Box</span>
+                                                        </div>
+                                                        <small class="help-text text-info">This is a tentative list of what can be fit in a
+                                                            vehicle.
+                                                            More items can be added if space is available.</small>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <figure class="figure">
+                                                            <img src="./images/tata-ace.png" class="figure-img img-fluid rounded"
+                                                                alt="tata ace">
+                                                            <figcaption class="figure-caption text-center"><small>Vehicle Type : Tata
+                                                                    Ace</small>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-1bhk" role="tabpanel" aria-labelledby="pills-1bhk-tab">
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div class="form-check my-2">
+                                                    <input class="form-check-input" type="radio" name="roomType" value="1bhk light">
+                                                    <label class="form-check-label px-2" for="checkRoomType">
+                                                        <b>1BHK Lite</b>
+                                                    </label>
+                                                </div>
+                                                <div class="details row no-gutters">
+                                                    <div class="col-sm-10">
+                                                        <p class="m-0">Appliances you can lift</p>
+                                                        <div class="liftableItems">
+                                                            <span class="badge badge-light p-2 my-2">1 TV & 1 Stand</span>
+                                                            <span class="badge badge-light p-2 my-2">2 Chairs</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Washing Machine</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Fridge</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Single Cot</span>
+                                                            <span class="badge badge-light p-2 my-2">10 Carton Box</span>
+                                                            <span class="badge badge-light p-2 my-2">Almirah</span>
+                                                        </div>
+                                                        <small class="help-text text-info">This is a tentative list of what can be fit in a
+                                                            vehicle.
+                                                            More
+                                                            items can be added if space is available.</small>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <figure class="figure">
+                                                            <img src="./images/super-ace.png" class="figure-img img-fluid rounded"
+                                                                alt="tata ace">
+                                                            <figcaption class="figure-caption text-center"><small>Vehicle Type : Tata Super
+                                                                    Ace</small></figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div class="form-check my-2">
+                                                    <input class="form-check-input" type="radio" name="roomType" value="1bhk heavy">
+                                                    <label class="form-check-label px-2" for="checkRoomType">
+                                                        <b>1BHK Heavy</b>
+                                                    </label>
+                                                </div>
+                                                <div class="details row no-gutters">
+                                                    <div class="col-sm-10">
+                                                        <p class="m-0">Appliances you can lift</p>
+                                                        <div class="liftableItems">
+                                                            <span class="badge badge-light p-2 my-2">1 TV</span>
+                                                            <span class="badge badge-light p-2 my-2">4 Chairs</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Washing Machine</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Fridge</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Single Cot</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Double Cot (non storage)</span>
+                                                            <span class="badge badge-light p-2 my-2">2 MATRESS</span>
+                                                            <span class="badge badge-light p-2 my-2">15 Carton Box</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Iron Almirah</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Centre Table</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Sofa 3 (except recliner)</span>
+                                                            <span class="badge badge-light p-2 my-2">Water Purifier</span>
+                                                        </div>
+                                                        <small class="help-text text-info">This is a tentative list of what can be fit in a
+                                                            vehicle.
+                                                            More
+                                                            items can be added if space is available.</small>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <figure class="figure">
+                                                            <img src="./images/407.png" class="figure-img img-fluid rounded" alt="tata ace">
+                                                            <figcaption class="figure-caption text-center"><small>Vehicle Type : Tata
+                                                                    407</small>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-2bhk" role="tabpanel" aria-labelledby="pills-2bhk-tab">
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div class="form-check my-2">
+                                                    <input class="form-check-input" type="radio" name="roomType" value="2bhk light">
+                                                    <label class="form-check-label px-2" for="checkRoomType">
+                                                        <b>2BHK Lite</b>
+                                                    </label>
+                                                </div>
+                                                <div class="details row no-gutters">
+                                                    <div class="col-sm-10">
+                                                        <p class="m-0">Appliances you can lift</p>
+                                                        <div class="liftableItems">
+                                                            <span class="badge badge-light p-2 my-2">1 TV & 1 Stand</span>
+                                                            <span class="badge badge-light p-2 my-2">2 Chairs</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Washing Machine</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Fridge</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Single Cot</span>
+                                                            <span class="badge badge-light p-2 my-2">10 Carton Box</span>
+                                                            <span class="badge badge-light p-2 my-2">Almirah</span>
+                                                        </div>
+                                                        <small class="help-text text-info">This is a tentative list of what can be fit in a
+                                                            vehicle.
+                                                            More
+                                                            items can be added if space is available.</small>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <figure class="figure">
+                                                            <img src="./images/canter.png" class="figure-img img-fluid rounded" alt="tata ace">
+                                                            <figcaption class="figure-caption text-center"><small>Vehicle Type : Canter(14
+                                                                    ft)</small>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div class="form-check my-2">
+                                                    <input class="form-check-input" type="radio" name="roomType" value="2bhk heavy">
+                                                    <label class="form-check-label px-2" for="checkRoomType">
+                                                        <b>2BHK Heavy</b>
+                                                    </label>
+                                                </div>
+                                                <div class="details row no-gutters">
+                                                    <div class="col-sm-10">
+                                                        <p class="m-0">Appliances you can lift</p>
+                                                        <div class="liftableItems">
+                                                            <span class="badge badge-light p-2 my-2">1 TV</span>
+                                                            <span class="badge badge-light p-2 my-2">4 Chairs</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Washing Machine</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Fridge</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Single Cot</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Double Cot (non storage)</span>
+                                                            <span class="badge badge-light p-2 my-2">2 MATRESS</span>
+                                                            <span class="badge badge-light p-2 my-2">15 Carton Box</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Iron Almirah</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Centre Table</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Sofa 3 (except recliner)</span>
+                                                            <span class="badge badge-light p-2 my-2">Water Purifier</span>
+                                                        </div>
+                                                        <small class="help-text text-info">This is a tentative list of what can be fit in a
+                                                            vehicle.
+                                                            More
+                                                            items can be added if space is available.</small>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <figure class="figure">
+                                                            <img src="./images/canter-heavy.png" class="figure-img img-fluid rounded"
+                                                                alt="tata ace">
+                                                            <figcaption class="figure-caption text-center"><small>Vehicle Type : Canter (17
+                                                                    ft)</small></figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-3bhk" role="tabpanel" aria-labelledby="pills-3bhk-tab">
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div class="form-check my-2">
+                                                    <input class="form-check-input" type="radio" name="roomType" value="2bhk heavy">
+                                                    <label class="form-check-label px-2" for="checkRoomType">
+                                                        <b>3 BHK</b>
+                                                    </label>
+                                                </div>
+                                                <div class="details row no-gutters">
+                                                    <div class="col-sm-10">
+                                                        <p class="m-0">Appliances you can lift</p>
+                                                        <div class="liftableItems">
+                                                            <span class="badge badge-light p-2 my-2">1 TV</span>
+                                                            <span class="badge badge-light p-2 my-2">4 Chairs</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Washing Machine</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Fridge</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Single Cot</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Double Cot (non storage)</span>
+                                                            <span class="badge badge-light p-2 my-2">2 MATRESS</span>
+                                                            <span class="badge badge-light p-2 my-2">15 Carton Box</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Iron Almirah</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Centre Table</span>
+                                                            <span class="badge badge-light p-2 my-2">1 Sofa 3 (except recliner)</span>
+                                                            <span class="badge badge-light p-2 my-2">Water Purifier</span>
+                                                        </div>
+                                                        <small class="help-text text-info">This is a tentative list of what can be fit in a
+                                                            vehicle.
+                                                            More
+                                                            items can be added if space is available.</small>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <figure class="figure">
+                                                            <img src="./images/canter-heavy.png" class="figure-img img-fluid rounded"
+                                                                alt="tata ace">
+                                                            <figcaption class="figure-caption text-center"><small>Vehicle Type : Canter (19
+                                                                    ft)</small>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input class="btn btn-warning float-right roomTypeSelection" type="submit" value="Next">
+                        </form>
+                    </div>
+                </div>
+                <div class="section col-xs-12 col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2 d-flex align-items-center">
+                    <div class="row mx-0 wrap">
+                        <div class="col">
+                                <input class="form-control calendar my-3 w-350" name="movingDate" value="" readonly>
+                                <div class="datepicker picker-one" data-toggle="datepicker"></div>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div class="wrap">
+                                <h1 class="text-center"><i class="far fa-calendar-alt text-info p-2"></i></h1>
+                                <h3 class="text-info text-center my-0">Select your shifting date</h3>
+                                <p class="text-center">Select a tentative date which you can update it anytime later</p>
+                                <button class="dateSelection btn btn-warning d-block mx-auto">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section col-xs-12 col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2 d-flex align-items-center justify-content-center">
+                    <div class="wrap">
+                        <form action="javascript:void(0)" class="form3">
+                            <h1 class="text-info text-center"><i class="fas fa-phone"></i></h1>
+                            <h4 class="p-5 text-center">We will need your contact info</h4>
+                            <div class="input-groups">
+                                <input type="text" name="name" placeholder="Name" class="form-control">
+                                <br>
+                                <input type="email" name="email" placeholder="Email" class="form-control">
+                                <br>
+                                <input type="tel" class="form-control input-md" placeholder="Phone number" name="phone">
+                                <br>
+                                <input class="btn btn-warning d-block mx-auto collectContactButton" type="submit" name="FormOneSubmit"
+                                value="Request a Quote">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="section col-xs-12 col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2 d-flex align-items-center justify-content-center">
+                    <div class="wrap">
+                        <h1 class="success-message text-center">Your request for a quote has been submitted successfully.</h1>
+                        <p class="text-center">One of our member will get back to you soon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/jquery/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="./assets/fullpage/vendors/easings.min.js"></script>
+<script type="text/javascript" src="./assets/fullpage/dist/fullpage.extensions.min.js"></script>
+<script src="./node_modules/@chenfengyuan/datepicker/dist/datepicker.min.js"></script>
+<style>
+    .btn{
+        border-radius: 0;
+    }
+    .form-control{
+        height: 50px;
+        font-size: 16px;
+        border:1px solid #dddddd;
+        outline: none;
+        border-radius: 0;
+    }
+    .fullpage,
+    .fullpage .section{min-height: 100vh;}
+    .fullpage ::-webkit-scrollbar {
+        width: 0px;  /* remove scrollbar space */
+        background: transparent;  /* optional: just make scrollbar invisible */
+    }
+    .calendar{
+        width:350px;
+    }
+    .left{
+        background:#5b7b94;
+        color:#fff;
+    }
+    #myTab.nav-tabs,
+    #myTab.nav-tabs .nav-link{
+        border:none;
+        font-weight: 600;
+        color:#5b7b94;
+    }
+    .nav-tabs .nav-link.active{
+        background-color:transparent;
+        border-bottom:3px solid #5b7b94 !important;
+    }
+    .nav-tabs .nav-link:focus{
+        outline: none;
+    }
+    .nav-pills .nav-link{
+        border-radius: 0;
+        color: #5B7B94;
+    }
+    .nav-pills .nav-link.active{
+        background-color:#5B7B94;
+    }
+    .disabled {
+        pointer-events: none;
+        opacity: 0.4;
+    }
+    #radioBtn .notActive{
+        color: #3276b1;
+        background-color: #fff;
+    }
+    .card{
+        border-radius: 0;
+        background:#f7f7f7;
+    }
+    input.form-check-input[type=radio] {
+        background: #ffffff;
+        padding: 8px;
+        border-radius: 0;
+        -webkit-appearance: none;
+        border: 1px solid #32a190;
+        outline: none;
+    }
+    .types input[type=radio]{
+        -webkit-appearance: none;
+    }
+    input.form-check-input[type=radio]:checked{
+        outline: none;
+        background: #32a190;
+    }
+    input.form-check-input[type=radio]:checked:before{
+        content: "";
+        width: 10px;
+        height: 6px;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        border: 2px solid #fff;
+        border-top: none;
+        border-right: none;
+        background: transparent;
+        opacity: 1;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    .badge{
+        border-radius: 0;
+    }
+    .badge-light{
+        background: #e5e5e5;
+    }
+    .datepicker .datepicker-container{
+        min-width: 350px;
+    }
+    .datepicker-panel > ul > li{
+        height: 50px;
+        width:50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .datepicker-panel>ul>li[data-view="day"]{
+        background-color: #e1f2e5;
+        color: #5d9a98;
+    }
+    .datepicker-panel>ul[data-view="week"]>li{
+        background-color: #e1e7ea;
+        color: #5B7B94;
+    }
+    .datepicker-panel>ul[data-view="week"]>li:hover{
+        background-color: #e0f2f9;
+    }
+    .datepicker-panel>ul>li[data-view="month next"], 
+    .datepicker-panel>ul>li[data-view="month prev"], 
+    .datepicker-panel>ul>li[data-view="year next"], 
+    .datepicker-panel>ul>li[data-view="year prev"], 
+    .datepicker-panel>ul>li[data-view="years next"], 
+    .datepicker-panel>ul>li[data-view="years prev"], 
+    .datepicker-panel>ul>li[data-view=next]{
+        background-color: #5B7B94;
+        color: #f7f7f7;
+    }
+    .datepicker-panel>ul>li[data-view="month current"], 
+    .datepicker-panel>ul>li[data-view="year current"], 
+    .datepicker-panel>ul>li[data-view="years current"]{
+        background-color: #8fb9ca;
+        color: #333333;
+        font-size: 1.5em;
+        width: 250px;
+    }
+    .datepicker-panel>ul[data-view=months]>li, 
+    .datepicker-panel>ul[data-view=years]>li {
+        height: 58.5px;
+        line-height: 58.5px;
+        width: 58.5px;
+    }
+    .datepicker-panel>ul>li.picked, 
+    .datepicker-panel>ul>li.picked:hover{
+        background-color: #32a190;
+        color: #ffffff;
+    }
+    .datepicker-panel>ul>li.highlighted{
+        background-color: #7fb1b2;
+        color: #ffffff;
+    }
+    
+    .datepicker-panel>ul>li.muted{
+        background-color: #eee;
+        color: #ccc;
+        cursor: default;
+    }
+    .datepicker-panel>ul>li.disabled{
+        background-color: #f7f7f7;
+        color: #ccc;
+        cursor: default;
+        opacity: 1;
+    }
+    .fullpage .slick-list{
+        overflow-y: visible;
+    }
+    
+</style>
+<script>
+$(document).ready(function() {
+    const FormDataArray = {};
+	
+    $slickOptions = {
+        arrows:false,
+        infinite:false,
+        fade:true,
+        draggable:false,
+        mobileFirst:true,
+        swipe:false,
+        touchMove:false,
+        adaptiveHeight:true,
+        initialSlide:0
+    }
+    $slides = $('.fullpage').slick($slickOptions);
+
+    $('#myTab .nav-item .nav-link').click(function(){
+        console.log($('.slick-active').index());
+        if($('.slick-active').index() != 0){
+            $slides.slick('unslick');
+            $('.fullpage').slick($slickOptions)
+        }
+    })
+    $('.estimateBtn11').click(function() {
+        $.when(CollectDataForm11()).then(function(){
+            setTimeout(() => {
+                changeSlide();
+            }, 1000);
+        });
+    });
+    $('.estimateBtn12').click(function() {
+        $.when(CollectDataForm12()).then(function(){
+            setTimeout(() => {
+                changeSlide();
+            }, 1000);
+        });
+    });
+    $('.estimateBtn2').click(function() {
+        $.when(CollectDataForm2()).then(function(){
+            setTimeout(() => {
+                changeSlide();
+            }, 1000);
+        });
+    });
+    $('.roomTypeSelection').click(function(){
+        $.when(CollectDataForm2()).then(function(){
+            setTimeout(()=>{
+                changeSlide();
+            },1000);
+        })
+    })
+    $('.dateSelection').click(function(){
+        $.when(CollectFormData3()).then(function(){
+            setTimeout(()=>{
+                changeSlide()
+            },1000);
+        })
+    })
+    $('.collectContactButton').click(function(){
+        $.when(CollectFormData4()).then(function(){
+            setTimeout(()=>{
+                sendEmail();
+            },1000);
+        })
+    })
+    $('#radioBtn a').on('click', function(){
+        var sel = $(this).data('title');
+        var tog = $(this).data('toggle');
+        $('#'+tog).prop('value', sel);
+        
+        $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').toggleClass('active')
+        $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
+    })
+
+    $datepicker = $('[data-toggle="datepicker"]').datepicker({
+        startDate:new Date(),
+        inline:true,
+        autoPick:true,
+        format:'dd/mm/yyyy'
+    });
+    $('.calendar').val($datepicker.datepicker('getDate',true));
+    $datepicker.on('pick.datepicker',function(e){
+        $date = convertDate(e.date);
+        $('.calendar').val($date);
+    })
+    $('.types input[type=radio]').on('change', function() {
+        if(this.value == "Vehicle"){
+            $('.property-size-div').addClass('disabled');
+        }else{
+            if($('.property-size-div').hasClass('disabled')){
+                $('.property-size-div').removeClass('disabled');
+            }
+        }
+    });
+
+    function changeSlide(){
+        $slides.slick('slickNext');
+    }
+
+    function CollectDataForm11(){
+        $data = $('form.form11').serializeArray().reduce(function(obj, item) {
+            obj[item.name] = item.value;
+            return obj;
+        }, {});
+        FormDataArray.data_one=$data;
+    }
+    function CollectDataForm12(){
+        $data = $('form.form12').serializeArray().reduce(function(obj, item) {
+            obj[item.name] = item.value;
+            return obj;
+        }, {});
+        FormDataArray.data_one=$data;
+    }
+    function CollectDataForm2(){
+        $data = $('form#form2').serializeArray().reduce(function(obj, item) {
+            obj[item.name] = item.value;
+            return obj;
+        }, {});
+        FormDataArray.data_two=$data;
+        console.log(FormDataArray);
+    }
+    function CollectFormData3(){
+        $data = { "movingDate" :  $('.calendar').val()};
+        FormDataArray.data_three=$data;
+        console.log(FormDataArray);
+    }
+    function CollectFormData4(){
+        $data = $('form.form3').serializeArray().reduce(function(obj, item) {
+            obj[item.name] = item.value;
+            return obj;
+        }, {});
+        FormDataArray.data_four=$data;
+        console.log(FormDataArray);
+    }
+    function convertDate(date) {
+        var yyyy = date.getFullYear().toString();
+        var mm = (date.getMonth() + 1).toString();
+        var dd = date.getDate().toString();
+
+        var mmChars = mm.split('');
+        var ddChars = dd.split('');
+
+        return (ddChars[1] ? dd : "0" + ddChars[0]) + '/' + (mmChars[1] ? mm : "0" + mmChars[0]) + '/' + yyyy;
+    }
+
+    function sendEmail(){
+        console.log(FormDataArray);
+        $.ajax({
+            url: "mail.php",
+            type: "POST",
+            data: { data : JSON.stringify(FormDataArray) },
+            ContentType: 'application/json',
+            success: function (data) {
+                changeSlide();
+            },
+            error: function (err) {
+                console.log(`Error : ${err}`);
+            }
+        });
+    }
+});
+</script>
+</html>
